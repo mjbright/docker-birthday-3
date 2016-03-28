@@ -682,9 +682,9 @@ Now, run your application. To do that, we'll use [Docker Compose](https://docs.d
 
 ----------------------- ------------------------------------
 
-Note: If you are following this tutorial on the Raspberry Pi you will need to modify the Dockerfiles of the **voting-app**, **worker**, **result-app** to use respectively the following Raspberry-Pi Docker images **hypriot/rpi-python**, **hypriot/rpi-java**, **hypriot/rpi-node**
+Note: If you are following this tutorial on the Raspberry Pi you will need to modify the Dockerfiles of the **voting-app**, **worker**, **result-app** to use respectively the following Raspberry-Pi Docker images **hypriot/rpi-python**, **hypriot/rpi-java**, **hypriot/rpi-node**  You should also replace redis:alpine in the compose file by hypriot/rpi-redis.
 
-Note: This solution is not yet complete - need to reverse engineer the **manomarks/worker** image to choose or build an equivalent for Rapsberry Pi
+Note: This solution is not yet complete - need to reverse engineer the **manomarks/worker** image to choose or build an equivalent for Rapsberry Pi, also need to find a postgres image.
 
 ----------------------------------------------------------------
 
