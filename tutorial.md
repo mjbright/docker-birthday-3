@@ -680,6 +680,14 @@ Replace it with your data:
 #### 3.2.3 Running your app
 Now, run your application. To do that, we'll use [Docker Compose](https://docs.docker.com/compose). Docker Compose is a tool for defining and running multi-container Docker applications. With Compose, you define a `.yml` file that describes all the containers and volumes that you want, and the networks between them. In the example-voting-app directory, you'll see a `docker-compose.yml file`:
 
+----------------------- ------------------------------------
+
+Note: If you are following this tutorial on the Raspberry Pi you will need to modify the Dockerfiles of the **voting-app**, **worker**, **result-app** to use respectively the following Raspberry-Pi Docker images **hypriot/rpi-python**, **hypriot/rpi-java**, **hypriot/rpi-node**
+
+Note: This solution is not yet complete - need to reverse engineer the **manomarks/worker** image to choose or build an equivalent for Rapsberry Pi
+
+----------------------------------------------------------------
+
 ```yml
 version: "2"
 
