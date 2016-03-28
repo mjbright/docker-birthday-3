@@ -199,6 +199,15 @@ Let's start by taking baby-steps. The first thing we're going to look at is how 
 
 The image that you are going to use is a single-page website that was already created for this demo and is available on the Docker Hub as [`seqvence/static-site`](https://hub.docker.com/r/seqvence/static-site/). You can download and run the image directly in one go using `docker run`.
 
+----------------------- ------------------------------------
+![Note: for Raspberry Pi uses](http://static1.squarespace.com/static/5666fb6a7086d71b4a69ca1c/5667f0f040667a43818e4adb/5667f7130e4c113066db31e7/1452781044535/?format=1000w)\ If you want to run this lab on the Raspberry Pi, you will need to use a compatible ARM architecture image.  instead of the image *'seqvence/static-site'*.
+          Such an image is available here ['mjbright/rpi-nginx/'](https://hub.docker.com/r/mjbright/rpi-nginx/)
+          You will need to replace **seqvence/static-site** by **mjbright/rpi-nginx** in the following instructions.
+ 
+----------------------------------------------------------------
+
+
+
 ```
 $ docker run seqvence/static-site
 ```
@@ -298,6 +307,12 @@ $ docker pull ubuntu:12.04
 ```
 
 **NOTE**: Do not execute the above command. It is only for your reference.
+
+----------------------- ------------------------------------
+Note: If you are following this tutorial on the Raspberry Pi there is not a Ubuntu image available.  A common base image for Raspberry Pi would be Alpine Linux such as provided by Hypriot: **hypriot/rpi-alpine-scratch**.
+ 
+----------------------------------------------------------------
+
 
 If you do not specify the version number of the image, then as mentioned the Docker client will default to a version named `latest`.
 
@@ -418,6 +433,12 @@ The next step now is to create a Docker image with this web app. As mentioned ab
 
 Create a file **Dockerfile**.
 Start by specifying our base image. Use the `FROM` keyword to do that
+
+----------------------- ------------------------------------
+
+Note: If you are following this tutorial on the Raspberry Pi you should use the Hypriot: **hypriot/rpi-alpine-scratch** image.  So replace **alpine: latest** by **hypriot/rpi-alpine-scratch** in the following Dockerfile
+
+----------------------------------------------------------------
 
 ```
 FROM alpine:latest
